@@ -185,6 +185,9 @@ section:nth-of-type(3) .card { background-color: var(--purple); }
 section:nth-of-type(3)::-webkit-scrollbar-thumb { background-color: var(--purple); }
 section:nth-of-type(4) .card { background-color: var(--blue); }
 section:nth-of-type(4)::-webkit-scrollbar-thumb { background-color: var(--blue); }
+section .card:hover {
+  background: linear-gradient(160deg, var(--yellow), var(--orange) 25%, var(--purple) 50%, var(--blue) 75%);
+}
 
 .sidebar {
   background: linear-gradient(160deg, var(--yellow), var(--orange) 25%, var(--purple) 50%, var(--blue) 75%);
