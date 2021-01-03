@@ -18,12 +18,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* body {
+body {
   background-image: linear-gradient(to top right, var(--white), var(--grey));
-} */
+}
 
 a {
   color: var(--white);
+  font-weight: bold;
   text-decoration: none;
 }
 a:hover {
@@ -40,12 +41,16 @@ a:hover {
 
 /* Header Area ------------------------------------------------------------- */
 #top-banner {
-  height: min(25vw, 200px);
-  /* bg img */
-  background-image: url(banner.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(160deg, var(--yellow), var(--orange) 25%, var(--purple) 50%, var(--blue) 75%);
+}
+
+#top-banner .wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  text-transform: uppercase;
 }
 
 header {
@@ -87,7 +92,7 @@ header { margin-bottom: min(8vw, 75px); }
 header h1 { transition: 0.2s font-size; }
 
 @media (max-width:600px) {
-  header h1 { font-size: 1.5rem; }
+  header h2 { font-size: 1.25rem; }
 }
 
 
@@ -99,10 +104,12 @@ header h1 { transition: 0.2s font-size; }
 }
 .wrapper.sidebar {
   width: 25%;
-  height: 25vw;
-  /* background: red; */
+  height: -moz-fit-content;
+  height: fit-content;
   position: sticky;
   top: 1rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  margin-top: 1rem;
 }
 
 @media (max-width:800px) {
@@ -116,12 +123,13 @@ header h1 { transition: 0.2s font-size; }
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
+    border-radius: 0.25rem;
   }
 }
 
 
 /* Page Content Config ----------------------------------------------------- */
-h2 { font-size: 1.75rem; }
+.content h2 { font-size: 1.75rem; }
 
 .content section {
   display: flex;
@@ -145,9 +153,6 @@ section::-webkit-scrollbar-track {
   /* border shadow */
   border-radius: 0.25rem;
   transition: 0.2s -moz-box-shadow, 0.2s -webkit-box-shadow, 0.2s box-shadow;
-  -moz-box-shadow: 0 0 0.25em var(--black);
-  -webkit-box-shadow: 0 0 0.25em var(--black);
-  box-shadow: 0 0 0.25em var(--black);
   /* children */
   text-align: center;
 }
@@ -160,7 +165,7 @@ section::-webkit-scrollbar-track {
 
 .card img {
   max-width: 125px;
-  border: 3px solid var(--black);
+  border: 0.2rem solid var(--black);
   border-radius: 50%;
   /* border shadow */
   -moz-box-shadow: 0 0 0.25em var(--black);
@@ -172,20 +177,18 @@ section::-webkit-scrollbar-track {
 
 
 /* Page Content Variations ------------------------------------------------- */
-h2:nth-of-type(1) { color: var(--orange); }
-section:nth-of-type(1) .card { background-color: var(--orange); }
-section:nth-of-type(1)::-webkit-scrollbar-thumb { background-color: var(--orange); }
-h2:nth-of-type(2) { color: var(--yellow); }
-section:nth-of-type(2) .card { background-color: var(--yellow); }
-section:nth-of-type(2)::-webkit-scrollbar-thumb { background-color: var(--yellow); }
-h2:nth-of-type(3) { color: var(--blue); }
-section:nth-of-type(3) .card { background-color: var(--blue); }
-section:nth-of-type(3)::-webkit-scrollbar-thumb { background-color: var(--blue); }
-h2:nth-of-type(4) { color: var(--purple); }
-section:nth-of-type(4) .card { background-color: var(--purple); }
-section:nth-of-type(4)::-webkit-scrollbar-thumb { background-color: var(--purple); }
+section:nth-of-type(1) .card { background-color: var(--yellow); }
+section:nth-of-type(1)::-webkit-scrollbar-thumb { background-color: var(--yellow); }
+section:nth-of-type(2) .card { background-color: var(--orange); }
+section:nth-of-type(2)::-webkit-scrollbar-thumb { background-color: var(--orange); }
+section:nth-of-type(3) .card { background-color: var(--purple); }
+section:nth-of-type(3)::-webkit-scrollbar-thumb { background-color: var(--purple); }
+section:nth-of-type(4) .card { background-color: var(--blue); }
+section:nth-of-type(4)::-webkit-scrollbar-thumb { background-color: var(--blue); }
 
-.sidebar { padding: 0; }
+.sidebar {
+  background: linear-gradient(160deg, var(--yellow), var(--orange) 25%, var(--purple) 50%, var(--blue) 75%);
+}
 .sidebar section {
   background: var(--grey);
   border-radius: 0.25rem;
@@ -193,7 +196,10 @@ section:nth-of-type(4)::-webkit-scrollbar-thumb { background-color: var(--purple
   margin: 1rem 0;
 }
 .sidebar h2 { line-height: 1.75rem; color: var(--black); }
-.sidebar a { margin-right: 0.5rem; }
+.sidebar a {
+  margin-right: 0.5rem;
+  color: var(--orange);
+}
 
 /* Footer Area ------------------------------------------------------------- */
 footer {
@@ -203,4 +209,11 @@ footer {
   -moz-box-shadow: 0 0 0.5em var(--black);
   -webkit-box-shadow: 0 0 0.5em var(--black);
   box-shadow: 0 0 0.5em var(--black);
+}
+
+footer .wrapper {
+  background: linear-gradient(160deg, var(--yellow), var(--orange) 25%, var(--purple) 50%, var(--blue) 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
